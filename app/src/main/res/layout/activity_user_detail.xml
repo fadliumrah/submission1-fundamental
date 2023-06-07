@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserDetail">
+
+    <com.github.siyamed.shapeimageview.CircularImageView
+        android:id="@+id/item_avatar"
+        style="@style/avatar_style"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintVertical_bias="0.16000003"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/location"
+        style="@style/asset1_style"
+        card_view:layout_constraintEnd_toStartOf="@+id/guideline2"
+        card_view:layout_constraintHorizontal_bias="0.95"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/company"
+        card_view:srcCompat="@drawable/ic_baseline_location_on_24"
+        android:contentDescription="@string/location_asset" />
+
+    <ImageView
+        android:id="@+id/name_id"
+        style="@style/asset2_style"
+        card_view:layout_constraintEnd_toStartOf="@+id/guideline2"
+        card_view:layout_constraintHorizontal_bias="0.95"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/item_avatar"
+        card_view:srcCompat="@drawable/ic_baseline_person_24"
+        android:contentDescription="@string/name_asset" />
+
+    <ImageView
+        android:id="@+id/company"
+        style="@style/asset1_style"
+        card_view:layout_constraintEnd_toStartOf="@+id/guideline2"
+        card_view:layout_constraintHorizontal_bias="0.95"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/name_id"
+        card_view:srcCompat="@drawable/ic_baseline_work_outline_24"
+        android:contentDescription="@string/company_asset" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        card_view:layout_constraintGuide_begin="52dp" />
+
+    <ImageView
+        android:id="@+id/repository"
+        style="@style/asset1_style"
+        card_view:layout_constraintEnd_toStartOf="@+id/guideline2"
+        card_view:layout_constraintHorizontal_bias="0.95"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/location"
+        card_view:srcCompat="@drawable/ic_baseline_folder_24"
+        android:contentDescription="@string/repository_asset" />
+
+    <TextView
+        android:id="@+id/tv_name_detail"
+        style="@style/tv_style"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp"
+        android:text=""
+        card_view:layout_constraintEnd_toEndOf="@+id/item_avatar"
+        card_view:layout_constraintHorizontal_bias="0.0"
+        card_view:layout_constraintStart_toStartOf="@+id/guideline2"
+        card_view:layout_constraintTop_toBottomOf="@+id/item_avatar" />
+
+    <TextView
+        android:id="@+id/tv_company"
+        style="@style/tv_style"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        card_view:layout_constraintEnd_toEndOf="@+id/tv_name_detail"
+        card_view:layout_constraintHorizontal_bias="0.0"
+        card_view:layout_constraintStart_toStartOf="@+id/guideline2"
+        card_view:layout_constraintTop_toBottomOf="@+id/tv_name_detail" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        style="@style/tv_style"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        card_view:layout_constraintEnd_toEndOf="@+id/tv_company"
+        card_view:layout_constraintHorizontal_bias="0.0"
+        card_view:layout_constraintStart_toStartOf="@+id/guideline2"
+        card_view:layout_constraintTop_toBottomOf="@+id/tv_company" />
+
+    <TextView
+        android:id="@+id/tv_repository"
+        style="@style/tv_style"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.0"
+        card_view:layout_constraintStart_toStartOf="@+id/guideline2"
+        card_view:layout_constraintTop_toBottomOf="@+id/tv_location" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/layout_style"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/follower"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/layout_style"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="52dp"
+        android:text="@string/following"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+
+    <TextView
+        android:id="@+id/followers"
+        style="@style/layout_style"
+        android:layout_marginTop="8dp"
+        android:text=""
+        card_view:layout_constraintEnd_toEndOf="@+id/textView2"
+        card_view:layout_constraintStart_toStartOf="@+id/textView2"
+        card_view:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/following"
+        style="@style/layout_style"
+        android:layout_marginTop="8dp"
+        android:text=""
+        card_view:layout_constraintEnd_toEndOf="@+id/textView3"
+        card_view:layout_constraintStart_toStartOf="@+id/textView3"
+        card_view:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="16dp"
+        android:background="#D7ECECEC"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/tv_repository" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
